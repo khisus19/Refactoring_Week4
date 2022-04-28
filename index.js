@@ -7,5 +7,6 @@ const explorersByMission = ExplorerService.filterByMission(explorers, "node")
 
 const explorersNumberByMission = ExplorerService.getAmountOfExplorersByMission(explorers, "node")
 
+const explorersUsernameByMission = ExplorerService.getExplorersUsernamesByMission(explorers, "node")
 
-console.log(explorersNumberByMission)
+console.log(explorersUsernameByMission)
