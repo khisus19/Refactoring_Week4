@@ -22,6 +22,6 @@ describe("Test para FizzbuzzService", () => {
     test("4. Validacion other score", () => {
         const explorer = {name: "Explorer1", score: 2};
         const explorersValidated = FizzbuzzService.applyValidationInExplorer(explorer);
-        expect(explorersValidated.trick).toBe(2);
+        expect(explorersValidated.trick).toBe(3);
     })
 })
