@@ -6,7 +6,6 @@ describe("Test para ExplorerService", () => {
         const explorers = Reader.readJsonFile("explorers.json");
         const explorersInNode = ExplorerService.filterByMission(explorers, "node");
         expect(explorersInNode[0].mission).toBe("node");
-        expect(explorersInNode[1].mission).toBe("node");
     });
     
     test("Método 2: Calcular todos los explorers en una misión", () => {
@@ -17,8 +16,8 @@ describe("Test para ExplorerService", () => {
 
     test("Método 3: Obtener los nombres de los explorers en una misión", () => {
         const explorers = Reader.readJsonFile("explorers.json");
-        const explorersInNode = ExplorerService.filterByMission(explorers, "node");
-        expect(explorersInNode[0].name).toBe("Woopa1");
+        const usernamesInNode = ExplorerService.getExplorersUsernamesByMission(explorers, "node");
+        expect(usernamesInNode[0]).toBe("ajolonauta1");
     });
 
 });
