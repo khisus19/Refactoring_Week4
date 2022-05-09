@@ -17,4 +17,10 @@ describe("Test para ExplorerController", () => {
         expect(explorersInNode).toBe(10);
 
     });
+
+    test("Prueba de 4to Método: getValidationNumber", () => {
+        const validationNumber = ExplorerController.getValidationNumber(15);
+        expect(validationNumber).toBe("FIZZBUZZ");
+
+    });
 });

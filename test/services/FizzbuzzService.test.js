@@ -26,9 +26,21 @@ describe("Test para FizzbuzzService", () => {
     });
 
 
-    test("5. Validacion de número", () => {
-        const explorer = 30;
+    test("5.1 Validacion de número por 'FIZZBUZZ'", () => {
+        const explorer = 15;
         const explorersValidated = FizzbuzzService.applyValidationInNumber(explorer);
-        expect(explorersValidated).toBe("FIZZBUZZ");
+        expect(explorersValidated.trick).toBe("FIZZBUZZ");
+    });
+
+    test("5.2 Validacion de número por 'BUZZ'", () => {
+        const explorer = 5;
+        const explorersValidated = FizzbuzzService.applyValidationInNumber(explorer);
+        expect(explorersValidated.trick).toBe("BUZZ");
+    });
+
+    test("5.3 Validacion de número que no tiene trick", () => {
+        const explorer = 4;
+        const explorersValidated = FizzbuzzService.applyValidationInNumber(explorer);
+        expect(explorersValidated.trick).toBe(undefined);
     });
 });
