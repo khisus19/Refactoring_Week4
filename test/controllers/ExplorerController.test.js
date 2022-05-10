@@ -20,7 +20,12 @@ describe("Test para ExplorerController", () => {
 
     test("Prueba de 4to Método: getValidationNumber", () => {
         const validationNumber = ExplorerController.getValidationNumber(15);
-        expect(validationNumber).toBe("FIZZBUZZ");
+        expect(validationNumber.trick).toBe("FIZZBUZZ");
 
+    });
+
+    test("Prueba del metodo getExplorersByStack", () => {
+        const explorerByStack = ExplorerController.getExplorersByStack("elixir");
+        expect(explorerByStack[0].stacks).toContain("elixir");
     });
 });

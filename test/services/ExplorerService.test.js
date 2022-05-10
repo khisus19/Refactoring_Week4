@@ -20,4 +20,9 @@ describe("Test para ExplorerService", () => {
         expect(usernamesInNode[0]).toBe("ajolonauta1");
     });
 
+    test("Método 4: Obtener una lista de explorer según un stack getExplorersListByStack", () => {
+        const explorers = [{"stacks": ["javascript","reasonML","elm"]},{"stacks": ["javascript","groovy","elm"]},{"stacks": ["elixir","groovy","reasonML"]}];
+        const explorerByStack = ExplorerService.getExplorersListByStack(explorers, "elixir");
+        expect(explorerByStack[0].stacks).toContain("elixir");
+    });
 });
